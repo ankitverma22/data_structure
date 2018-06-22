@@ -30,6 +30,7 @@ class SinglyLinkedList:
 
         temp = self.head
 
+
         while temp.next:
             temp = temp.next
 
@@ -60,6 +61,7 @@ class SinglyLinkedList:
             prev = temp
             temp = temp.next
 
+
     def print_list(self):
         temp = self.head
         # for i in range(self.length ):
@@ -84,6 +86,7 @@ def main():
         # singly_linked_list.print_list()
         singly_linked_list.delete(5)
         singly_linked_list.print_list()
+
 
 
 
