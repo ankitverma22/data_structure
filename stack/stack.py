@@ -1,37 +1,41 @@
-class Node:
+class StackNode:
     def __init__(self, data, next):
         self.data = data
         self.next = next
 
-
+# add a element in the stack
 class Stack:
     def __init__(self):
-        self.top = None
+        self.root = None
 
+    def isempty(self):
+        return True if self.root is None else False
+
+#deleate an elemant on stack
     def push(self, data):
-        self.top = Node(data, self.top)
+        self.root = StackNode(data, self.root)
+        print("%d pushed to stack"%(data))
 
     def pop(self):
-        if self.top:
-            poped_node = self.top.data
-            self.top = self.top.next
-            return poped_node
-        else:
-            return -1
+        if self.root is None:
+            return float("-inf")
+        temp = self.root
+        self.root = self.root.next
+        popped  = temp.data
+        return popped
 
+    def peek(self):
+        if self.root is None:
+            return float("")
+        return self.root.data
 
 def main():
     stack = Stack()
-    for i in range(10):
-        stack.push(i)
+    stack.push(20)
+    stack.push(30)
+    print(stack.pop())
+    print(stack.isempty())
+    print(stack.peek())
 
-    for i in range(12):
-        print(stack.pop())
-
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
-
-
-
-
