@@ -54,6 +54,14 @@ class SingeyLinkedList:
 
             prev = temp
             temp = temp.next
+    def reversed(self):
+        temp = self.head
+        reversed_SLL = SingeyLinkedList()
+        while temp:
+            reversed_SLL.add_at_beginning(temp.data)
+            temp= temp.next
+        return reversed_SLL.print_list()
+
 
     def get_Nth_node(self, n):
         count = 0
@@ -82,9 +90,12 @@ def main():
     Singely_linked_list.add_at_beginning(33)
     Singely_linked_list.add_at_beginning(34)
     Singely_linked_list.add_at_beginning(36)
-    b=9
-    print(Singely_linked_list.get_Nth_node(b))
+    print(Singely_linked_list.get_Nth_node(3))
+    Singely_linked_list.reversed()
+    b=4
+    # print(Singely_linked_list.get_Nth_node(b))
     # Singely_linked_list.delete(31)
+    print("\n")
     Singely_linked_list.print_list()
 
 
