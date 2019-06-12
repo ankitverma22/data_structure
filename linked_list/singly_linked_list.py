@@ -77,14 +77,15 @@ def main():
     for i in range(12):
         singly_linked_list.add_at_beginning(i)
         # singly_linked_list.print_list()
-        # print("  ",singly_linked_list.length)
+        print("  ",singly_linked_list.length)
 
         # singly_linked_list.delete(4)
         # singly_linked_list.print_list()
         # singly_linked_list.delete(13)
         # singly_linked_list.print_list()
-        # singly_linked_list.delete(5)
-        # singly_linked_list.print_list()
+        singly_linked_list.delete(5)
+        singly_linked_list.print_list()
+
 
 
 
